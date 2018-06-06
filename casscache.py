@@ -57,7 +57,7 @@ class Client(object):
             hosts.add(host)
 
         self._cluster = Cluster(hosts, port=int(port), **kwargs)
-        self._cluster.protocol_version = 1
+        self._cluster.protocol_version = 3
         self._session = self._cluster.connect()
 
         self.keyspace = keyspace
